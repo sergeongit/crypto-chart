@@ -1,0 +1,14 @@
+<mat-card class="header">
+  <form class="header__form-group" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="header__input">
+      <mat-label>Currency 1</mat-label>
+      <input matInput formControlName="crypto1" placeholder="Ex. BTC">
+    </mat-form-field>
+    <p class="header__slash">/</p>
+    <mat-form-field class="header__input">
+      <mat-label>Currency 2</mat-label>
+      <input matInput formControlName="crypto2" placeholder="Ex. USD">
+    </mat-form-field>
+    <button mat-button class="header__button" type="submit" [disabled]="form.invalid">Subscribe</button>
+  </form>
+</mat-card>

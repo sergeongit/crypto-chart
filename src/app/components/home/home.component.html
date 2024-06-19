@@ -1,0 +1,29 @@
+<article class="home">
+<!--  header  -->
+  <section class="home__tile">
+    <app-header (symbolChange)="handleSymbolChange($event)"></app-header>
+  </section>
+<!--  market data  -->
+  <section class="home__tile">
+    <h2 class="home__title">Market data:</h2>
+    <mat-card class="home__card">
+      <div class="home__card-item -symbol">
+        <h3>Symbol:</h3>
+        <p>{{mainCurrency || '-//-'}}</p>
+      </div>
+      <div class="home__card-item">
+        <h3>Price:</h3>
+        <p>{{currencyValue || '-//-'}}</p>
+      </div>
+      <div class="home__card-item">
+        <h3>Time:</h3>
+        <p>{{(currencyTimeExchange | date: 'MMM dd, hh:mm') || '-//-'}}</p>
+      </div>
+    </mat-card>
+  </section>
+<!--  chart  -->
+  <section class="home__tile">
+    <h2 class="home__title">Charting data:</h2>
+    <app-chart [mainCurrencyCode]="mainCurrency" [secondaryCurrencyCode]="secondaryCurrency"></app-chart>
+  </section>
+</article>

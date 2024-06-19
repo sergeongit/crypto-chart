@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #ffffff;
+}
+
+//___Custom styles
+.mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
